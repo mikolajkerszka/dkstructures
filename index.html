@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi montersje dkstructures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth'});
+            document.getElementById(sectionId).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+            document.getElementById(sectionId).style.transition = 'background-color 0.5s ease';
+            setTimeout(function() {
+                document.getElementById(sectionId).style.backgroundColor = 'transparent';
+                document.getElementById(sectionId).style.transition = 'all 0.2s';
+            }, 1000);
+        }
+        function scrolltoTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="lang.js"></script>
+</head>
+<body>
+    <div class="nav" onclick="scrolltoTop()">
+        <div class="nav-btn">
+            <div data-i18n="nav-about" class="btn" onclick="scrollToSection('about')">O NAS</div>
+            <div data-i18n="nav-skills" class="btn" onclick="scrollToSection('skills')">UMIEJĘTNOŚCI</div>
+            <div data-i18n="nav-certificates" class="btn" onclick="scrollToSection('certificates')">DOŚWIADCZENIE</div>
+            <div data-i18n="nav-contact" class="btn" onclick="scrollToSection('contact')">KONTAKT</div>
+            <div class="btn-lang">
+                <div class="lang">
+                    <img src="images/pl.png" alt="PL" onclick="changeLanguage('pl')">
+                </div>
+                <div class="lang">
+                    <img src="images/en.png" alt="EN" onclick="changeLanguage('en')">
+                </div>
+            </div>
+        </div>
+        <div class="nav-logo"><span class="dk-color">DK</span><span class="structures-color">STRUCTURES</span></div>
+    </div>
+    <div class="ellipse">
+        <div class="about" id="about">
+            <div data-i18n="about-title" class="title">O NAS</div>
+            <div data-i18n="about" class="text">
+                Jako doświadczony monter kadłubów i foreman kompleksowo realizuję prace stoczniowe na podstawie dokumentacji technicznej. Łączę twarde umiejętności praktyczne – montaż, cięcie, żłobienie oraz szczepienie stali, aluminium i Cunifer (TIG, MIG/MAG, MMA). Jednocześnie mam doświadczenie w skutecznym zarządzaniu pracami. Gwarantuję precyzję wykonania i świetną organizację robót na jednostkach pływających.
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <img src="images/welder.png" alt="">
+    </div>
+    <div class="skills" id="skills">
+        <div data-i18n="skills-title" class="title">UMIEJĘTNOŚCI</div>
+        <div class="text">
+            <ul>
+                <li data-i18n="skills1">Montaż kadłubów i konstrukcji stalowych zgodnie z rysunkiem technicznym</li>
+                <li data-i18n="skills2">Szczepienie stali czarnej, nierdzewnej, aluminium oraz Cunifer metodami tig, mig/mag i mma</li>
+                <li data-i18n="skills3">Cięcie palnikiem i oddtapianie</li>
+                <li data-i18n="skills4">Żłobienie elektrodą węglową</li>
+            </ul>
+        </div>
+    </div>
+    <div class="certificates" id="certificates">
+        <div data-i18n="certificates-title" class="title">Doświadczenie</div>
+        <div class="text">
+            <ul>
+                <li data-i18n="certificates1">Praca jako monter</li>
+                <li data-i18n="certificates2">Praca jako foreman</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact" id="contact">
+            <div data-i18n="contact-title" class="c-title">KONTAKT</div>
+            <div class="text">
+                <a href=""><p><span class="material-symbols-outlined">phone_in_talk</span>-</p></a>
+                <a href=""><p><span class="material-symbols-outlined">mail</span>-</p></a>
+            </div>
+        </div>
+        <div data-i18n="copyright" class="copyright">© Wszystkie prawa zastrzeżone.</div>
+    </div>
+</body>
+
+</html>
